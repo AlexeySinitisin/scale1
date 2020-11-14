@@ -14,6 +14,7 @@ body {
     min-width: 1110px;
     height: 100%;
     background: #000;
+    
 }
 
 @mixin font-header {
@@ -280,11 +281,11 @@ body {
 
 .new-coll {
     background: url(../img/fon_new-collection.png) no-repeat 50%/cover;
-    flex: 0 0 45.83333333333333%;
+    
     position: relative;
     display: flex;
     justify-content: center;
-    width: 42.24%;
+    width: 45.84%;
 
     &__title {
         font-family: Playfair Display;
