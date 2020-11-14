@@ -9,6 +9,7 @@
         url('../font/Post\ No\ Bills\ Jaffna\ Bold\ 700.ttf') format('ttf');
 
 }
+*{box-sizing:border-box;}
 //  VARIABLES
 $screen-xs:576px;
 $screen-s:768px;
@@ -19,7 +20,7 @@ $screen-xl:1680px;
 
 
 body {
-    min-width: 1110px;
+    
     height: 100%;
     background: #000;
     margin: 0 auto;
@@ -409,11 +410,13 @@ body {
 }
 
 .new-income {
-    height: 1289px;
+   
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0 auto;
+   
 
     &__title {
         font-family: Playfair Display;
@@ -426,12 +429,14 @@ body {
         text-transform: uppercase;
         color: #FFFFFF;
         margin-bottom: 120px;
+        margin-top:126px;
     }
 
     &__content {
 
-        flex-basis: 0 0 57.76041666666667%;
+        margin-bottom: 144px;
         display: flex;
+        margin: 0 auto;
         
 
         .season20__column {
@@ -484,7 +489,8 @@ body {
 
 .footer {
 
-    background: url(../img/fon__footer.png), #C4C4C4;
+    background: url(../img/fon__footer.png) no-repeat 50%/cover;
+   
     width: 100%;
 
     &__conteiner {
@@ -652,6 +658,38 @@ body {
         margin: 0 auto;
         width: 100%;
     }
+    body{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
+}
+@media(max-width:$screen-l){
+    .new-income__content{
+        flex-wrap: wrap;
+    }
+
+    .brand__content{
+        flex-direction: column;
+    }
+    .brand__img{
+        padding: 0;
+        margin-right: 0;
+    }
+    .footer__conteiner{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .mailing__content{
+        padding-bottom: 20px;
+    }
+    .season20__column:nth-child(3){
+        margin-right: 0;
+    }
+    .submenu__conteiner{
+        width: 100%;
+        min-width: 360px;
+    }
 
 }
