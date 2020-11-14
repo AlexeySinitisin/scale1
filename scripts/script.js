@@ -1,0 +1,20 @@
+"use strict";
+//const result = confirm("are you here");
+//console.log(result);
+//const answer = +prompt("Вам есть 18?", "18");
+//console.log(typeof(answer));
+//const answers = [];
+//answers[0] = prompt("how are you name?", "");
+//answers[1] = prompt("how are you last name?", "");
+//answers[2] = prompt("what is your name?", "");
+//console.log(typeof(answers));
+//const category = "toys";
+//console.log(`https://somf.com/${category}/5`);
+//const user = "ivan";
+//alert(`hi,${user}`);
+let incr = 10,
+    decr = 10;
+    //++incr;
+    //decr--;
+    console.log(incr++);
+    console.log(--decr);
