@@ -174,11 +174,11 @@ body {
 
 .conteiner {
   display: flex;
-  height: 730px;
 }
 
 .season20 {
   width: 54.156%;
+  padding-bottom: 93px;
 }
 .season20__column:last-child {
   margin-right: 0;
@@ -198,7 +198,7 @@ body {
 }
 
 .season20__column {
-  margin-right: 50px;
+  margin-right: 4.8076923077%;
 }
 
 .season20__conteiner {
@@ -239,6 +239,7 @@ body {
 
 .new-coll {
   background: url(../img/fon_new-collection.png) no-repeat 50%/cover;
+  height: 730px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -282,6 +283,7 @@ body {
 
 .conteiner_other {
   height: 600px;
+  display: flex;
 }
 
 .season18-img {
@@ -536,4 +538,19 @@ body {
   /* identical to box height */
   /* light-gray */
   color: #D0D0D0;
+}
+
+@media (max-width: 1680px) {
+  .conteiner {
+    flex-direction: column;
+  }
+
+  .season20 {
+    margin: 0 auto;
+  }
+
+  .new-coll {
+    margin: 0 auto;
+    width: 100%;
+  }
 }

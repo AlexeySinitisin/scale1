@@ -9,6 +9,14 @@
         url('../font/Post\ No\ Bills\ Jaffna\ Bold\ 700.ttf') format('ttf');
 
 }
+//  VARIABLES
+$screen-xs:576px;
+$screen-s:768px;
+$screen-m:992px;
+$screen-l:1200px;
+$screen-xl:1680px;
+
+
 
 body {
     min-width: 1110px;
@@ -220,11 +228,13 @@ body {
 .conteiner {
     display: flex;
 
-    height: 730px;
+    
 }
 
 .season20 {
     width:54.156%;
+   
+    padding-bottom: 93px;
     &__column:last-child{
         margin-right: 0;
     }
@@ -244,7 +254,7 @@ body {
 }
 
 .season20__column {
-    margin-right: 50px;
+    margin-right: 50px / 1040px *100%;
 }
 
 .season20__conteiner {
@@ -285,7 +295,7 @@ body {
 
 .new-coll {
     background: url(../img/fon_new-collection.png) no-repeat 50%/cover;
-    
+    height:  730px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -334,6 +344,7 @@ body {
 
 .conteiner_other {
     height: 600px;
+    display: flex;
 }
 
 .season18-img {
@@ -631,4 +642,16 @@ body {
        /* light-gray */
         color: #D0D0D0;
     }
+}
+@media(max-width:$screen-xl){
+    .conteiner{flex-direction: column;}
+    .season20{
+        margin:0 auto;
+    }
+    .new-coll{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+
 }
