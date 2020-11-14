@@ -566,7 +566,7 @@ body {
 }
 @media (max-width: 1200px) {
   .new-income__content {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .brand__content {
@@ -595,5 +595,9 @@ body {
   .submenu__conteiner {
     width: 100%;
     min-width: 360px;
+  }
+
+  .conteiner_other {
+    height: auto;
   }
 }

@@ -666,9 +666,10 @@ body {
 }
 @media(max-width:$screen-l){
     .new-income__content{
-        flex-wrap: wrap;
+        flex-direction: column;
+        
     }
-
+  
     .brand__content{
         flex-direction: column;
     }
@@ -691,5 +692,10 @@ body {
         width: 100%;
         min-width: 360px;
     }
-
+    .conteiner_other {
+        height: auto;}
+    .footer__conteiner{
+        width: auto;
+    }
+      
 }
