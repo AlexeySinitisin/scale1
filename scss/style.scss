@@ -589,7 +589,7 @@ body {
 
     .mailing {
         &__content {
-            width: 351px;
+            max-width: 351px;
 
         }
 
@@ -801,7 +801,8 @@ body {
     .nav__menu {
         z-index: 1;
         position: fixed;
-        top: -100%;
+        top: 0;
+        display: none;
         left: 0;
         width: 100%;
         height: 100%;
@@ -813,11 +814,7 @@ body {
         a {
             margin-bottom: 20px;
         }
-         .nav__menu .active{
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
+
         .menu {
             display: flex;
             flex-direction: column;
@@ -825,7 +822,9 @@ body {
         }
 
     }
-
+    .nav__menu.active{
+        display: block;
+    }
     .burger.active:before {
         transform: rotate(45deg);
         top: 9px;
@@ -844,5 +843,29 @@ body {
     }
     .new-income__content .season20__column{
         width: 99%;
+    }
+}
+@media(max-width:550px){
+   .header{
+       .contact__text{
+           display: none;
+       }
+       .contact__text-tel{
+           display: block;
+       }
+     
+    }
+    .submenu .submenu__title{
+        height: 240px;
+        width: 240px;
+    } 
+    .footer .mailing__input{
+        width: 170px;
+    }
+    .footer .mailing__btn{
+        width: 110px;
+    }
+    .season18__button{
+        width: 100%;
     }
 }
