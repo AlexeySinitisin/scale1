@@ -80,8 +80,10 @@ body {
 
 .nav .nav_content {
   background-color: #0F0F0F;
+  position: relative;
 }
 .nav .nav_container {
+  position: relative;
   max-width: 1110px;
   margin: 0 auto;
   width: 100%;
@@ -593,7 +595,8 @@ body {
   }
 
   .footer__conteiner {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 0;
     margin: 0;
   }
@@ -613,5 +616,100 @@ body {
 
   .footer__conteiner {
     width: auto;
+  }
+}
+@media (min-width: 830px) {
+  .burger {
+    display: none;
+  }
+}
+@media (max-width: 830px) {
+  .season20__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.lock {
+    overflow: hidden;
+  }
+
+  .season20__column {
+    margin-right: 0;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+
+  .burger span {
+    z-index: 2;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .burger:before,
+.burger:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+  }
+
+  .burger:before {
+    top: 0;
+  }
+
+  .burger:after {
+    bottom: 0;
+  }
+
+  .nav .nav__menu {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0F0F;
+    flex-direction: column;
+    align-items: start;
+    overflow: auto;
+  }
+  .nav .nav__menu a {
+    margin-bottom: 20px;
+  }
+  .nav .nav__menu .nav .nav__menu.active {
+    top: 0;
+  }
+  .nav .nav__menu .menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .burger.active span {
+    transform: scale(0);
   }
 }

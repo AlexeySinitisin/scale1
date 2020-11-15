@@ -9,7 +9,11 @@
         url('../font/Post\ No\ Bills\ Jaffna\ Bold\ 700.ttf') format('ttf');
 
 }
-*{box-sizing:border-box;}
+
+* {
+    box-sizing: border-box;
+}
+
 //  VARIABLES
 $screen-xs:576px;
 $screen-s:768px;
@@ -20,11 +24,11 @@ $screen-xl:1680px;
 
 
 body {
-    
+
     height: 100%;
     background: #000;
     margin: 0 auto;
-    
+
 }
 
 @mixin font-header {
@@ -116,9 +120,11 @@ body {
 
     .nav_content {
         background-color: #0F0F0F;
+        position: relative;
     }
 
     .nav_container {
+        position: relative;
         max-width: 1110px;
         margin: 0 auto;
         width: 100%;
@@ -170,8 +176,8 @@ body {
 
 .submenu {
     background: url(../img/fon1.png);
-    background-size:auto auto;
-    
+    background-size: auto auto;
+
     height: 810px;
     display: flex;
     place-content: center;
@@ -229,14 +235,15 @@ body {
 .conteiner {
     display: flex;
 
-    
+
 }
 
 .season20 {
-    width:54.156%;
-   
+    width: 54.156%;
+
     padding-bottom: 93px;
-    &__column:last-child{
+
+    &__column:last-child {
         margin-right: 0;
     }
 }
@@ -296,7 +303,7 @@ body {
 
 .new-coll {
     background: url(../img/fon_new-collection.png) no-repeat 50%/cover;
-    height:  730px;
+    height: 730px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -410,13 +417,13 @@ body {
 }
 
 .new-income {
-   
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-   
+
 
     &__title {
         font-family: Playfair Display;
@@ -429,7 +436,7 @@ body {
         text-transform: uppercase;
         color: #FFFFFF;
         margin-bottom: 120px;
-        margin-top:126px;
+        margin-top: 126px;
     }
 
     &__content {
@@ -437,13 +444,14 @@ body {
         margin-bottom: 144px;
         display: flex;
         margin: 0 auto;
-        
+
 
         .season20__column {
             margin-right: 20px;
             margin-bottom: 40px;
         }
-        .season20__column:last-child{
+
+        .season20__column:last-child {
             margin-right: 0;
         }
 
@@ -482,7 +490,8 @@ body {
     &__img {
         margin-right: 30px;
     }
-    &__img:last-child{
+
+    &__img:last-child {
         margin-right: 0;
     }
 }
@@ -490,7 +499,7 @@ body {
 .footer {
 
     background: url(../img/fon__footer.png) no-repeat 50%/cover;
-   
+
     width: 100%;
 
     &__conteiner {
@@ -537,12 +546,12 @@ body {
         display: flex;
         flex-direction: column;
         width: 350px;
-        
+
     }
 
     .category__content {
         width: 287px;
-        
+
 
     }
 
@@ -571,7 +580,8 @@ body {
         align-items: center;
         margin-right: 20px;
         margin-bottom: 20px;
-        .category__text:last-child{
+
+        .category__text:last-child {
             margin-right: 0;
         }
     }
@@ -645,68 +655,186 @@ body {
         font-size: 12px;
         line-height: 16px;
         /* identical to box height */
-       /* light-gray */
+        /* light-gray */
         color: #D0D0D0;
     }
 }
-@media(max-width:$screen-xl){
-    .conteiner{flex-direction: column;}
-    .season20{
-        margin:0 auto;
+
+@media(max-width:$screen-xl) {
+    .conteiner {
+        flex-direction: column;
     }
-    .new-coll{
+
+    .season20 {
+        margin: 0 auto;
+    }
+
+    .new-coll {
         margin: 0 auto;
         width: 100%;
     }
-    body{
+
+    body {
         padding-left: 10px;
         padding-right: 10px;
     }
 
 }
-@media(max-width:$screen-l){
-    .new-income__content{
+
+@media(max-width:$screen-l) {
+    .new-income__content {
         flex-wrap: wrap;
         margin: 0 auto;
-        .season20__column{
+
+        .season20__column {
             width: 50%;
             margin-right: 0;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items:center;
+            align-items: center;
         }
-        
+
     }
-    .new-income__content .season20__column:last-child{
+
+    .new-income__content .season20__column:last-child {
         margin-right: auto;
     }
-  
-    .brand__content{
+
+    .brand__content {
         flex-direction: column;
     }
-    .brand__img{
+
+    .brand__img {
         padding: 0;
         margin-right: 0;
     }
-    .footer__conteiner{
-        flex-direction: column;
+
+    .footer__conteiner {
+        flex-wrap: wrap;
+        justify-content: space-around;
         padding: 0;
         margin: 0;
     }
-    .mailing__content{
+
+    .mailing__content {
         padding-bottom: 20px;
     }
-  
-    .submenu__conteiner{
+
+    .submenu__conteiner {
         width: 100%;
         min-width: 360px;
     }
+
     .conteiner_other {
-        height: auto;}
-    .footer__conteiner{
+        height: auto;
+    }
+
+    .footer__conteiner {
         width: auto;
     }
-      
+
+}
+
+@media(min-width:830px) {
+    .burger {
+        display: none;
+    }
+}
+
+@media(max-width:830px) {
+    .season20__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .season20__column {
+        margin-right: 0;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .burger span {
+        z-index: 2;
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .burger:before,
+    .burger:after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        z-index: 2;
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger:before {
+        top: 0;
+    }
+
+    .burger:after {
+        bottom: 0;
+    }
+
+    .nav .nav__menu {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #0F0F0F;
+        flex-direction: column;
+        align-items: start;
+        overflow: auto;
+
+        a {
+            margin-bottom: 20px;
+        }
+        .nav .nav__menu.active{
+            top: 0;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    }
+
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .burger.active span {
+        transform: scale(0);
+    }
+
 }
