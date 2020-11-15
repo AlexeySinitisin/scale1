@@ -137,6 +137,14 @@ body {
     .nav__menu {
         display: flex;
         align-items: center;
+        .menu__icon {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    
+        .menu__icon:last-child {
+            padding-right: 0;
+        }
     }
 
     .menu {
@@ -164,14 +172,7 @@ body {
 
     
 
-    .menu__icon {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
 
-    .menu__icon:last-child {
-        padding-right: 0;
-    }
 }
 
 .submenu {
@@ -838,5 +839,10 @@ body {
     .burger.active span {
         transform: scale(0);
     }
-
+    .conteiner-two{
+        flex-direction: column;
+    }
+    .new-income__content .season20__column{
+        width: 100%;
+    }
 }
