@@ -566,7 +566,21 @@ body {
 }
 @media (max-width: 1200px) {
   .new-income__content {
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .new-income__content .season20__column {
+    width: 50%;
+    margin-right: 0;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .new-income__content .season20__column:last-child {
+    margin-right: auto;
   }
 
   .brand__content {
@@ -586,10 +600,6 @@ body {
 
   .mailing__content {
     padding-bottom: 20px;
-  }
-
-  .season20__column:nth-child(3) {
-    margin-right: 0;
   }
 
   .submenu__conteiner {
