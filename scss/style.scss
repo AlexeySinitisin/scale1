@@ -183,7 +183,7 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        min-width: 1110px;
+        max-width: 1110px;
 
 
     }
@@ -499,7 +499,7 @@ body {
         align-items: center;
         padding-top: 80px;
         padding-bottom: 100px;
-        width: 1110px;
+        max-width: 1110px;
         margin: 0 auto;
     }
 
