@@ -762,4 +762,8 @@ body {
   .season18__button {
     width: 290px;
   }
+
+  .submenu__conteiner {
+    min-width: 320px;
+  }
 }
