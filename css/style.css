@@ -134,8 +134,7 @@ body {
 }
 
 .submenu {
-  background: url(../img/fon1.png);
-  background-size: auto auto;
+  background: url(../img/fon1.png) 50%/cover;
   height: 810px;
   display: flex;
   place-content: center;
@@ -167,6 +166,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 .submenu .submenu__text {
   font-family: PT Sans;
@@ -203,6 +203,7 @@ body {
   margin-bottom: 100px;
   color: #FFFFFF;
   margin-top: 93px;
+  text-transform: uppercase;
 }
 
 .season20__column {
@@ -246,7 +247,7 @@ body {
 }
 
 .new-coll {
-  background: url(../img/fon_new-collection.png) no-repeat 50%/cover;
+  background: url(../img/fon_new-collection.png) 50%/cover no-repeat;
   height: 730px;
   position: relative;
   display: flex;
@@ -577,7 +578,6 @@ body {
   .new-income__content .season20__column {
     width: 50%;
     margin-right: 0;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -630,6 +630,9 @@ body {
   .season20__content {
     display: flex;
     flex-direction: column;
+  }
+  .season20__content .season20__column {
+    margin-bottom: 30px;
   }
 
   body.lock {
@@ -727,11 +730,20 @@ body {
   }
 }
 @media (max-width: 550px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .header .contact__text {
     display: none;
   }
   .header .contact__text-tel {
     display: block;
+  }
+
+  .new-coll__title {
+    top: 450px;
   }
 
   .submenu .submenu__title {
@@ -748,6 +760,6 @@ body {
   }
 
   .season18__button {
-    width: 100%;
+    width: 290px;
   }
 }
